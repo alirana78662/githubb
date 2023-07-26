@@ -2,10 +2,9 @@ from playwright.sync_api import Playwright
 from Git_UI_TestCases.test_git_repo import GitRepo
 
 
-def test_git_repo_ui(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch()
-    context = browser.new_context(storage_state="state.json")
-    page = context.new_page()
+def test_git_repo_ui(page: Playwright) -> None:
+    browser = page.chromium.launch()
+    page = browser.new_page()
     git = GitRepo(page)
     git.navigate()
     git.login()
