@@ -1,5 +1,6 @@
 import time
 
+
 # wef
 class GitRepo:
     def __init__(self, page):
@@ -17,7 +18,7 @@ class GitRepo:
         time.sleep(5)
 
     def Del_Git_Repo_Ui(self):
-        #self.page.get_by_role("link", name="alirana78662/GitAutomation").click()
+        # self.page.get_by_role("link", name="alirana78662/GitAutomation").click()
         self.page.locator("//a[@id='settings-tab']").click()
         self.page.locator("//span[contains(text(), 'Delete this repository')]").click()
         self.page.locator("//span[contains(text(), 'I want to delete this repository')]").click()
