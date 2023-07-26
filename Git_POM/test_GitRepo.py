@@ -3,7 +3,7 @@ from Git_UI_TestCases.test_git_repo import GitRepo
 
 
 def test_git_repo_ui(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch()
+    browser = playwright.chromium.launch(headless=False, slow_mo=400)
     context = browser.new_context(storage_state="state.json")
     page = context.new_page()
     git = GitRepo(page)
