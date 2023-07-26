@@ -10,3 +10,4 @@ def test_git_repo_ui(playwright: Playwright) -> None:
     git.navigate()
     git.Add_Git_Repo_Ui()
     git.Del_Git_Repo_Ui()
+
