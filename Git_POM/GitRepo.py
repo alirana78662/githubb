@@ -2,7 +2,7 @@ from playwright.sync_api import Playwright
 from Git_UI_TestCases.test_git_repo import GitRepo
 
 
-# werg
+
 def test_git_repo_ui(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False, slow_mo=400)
     context = browser.new_context(storage_state="state.json")
