@@ -8,16 +8,16 @@ class GitRepo:
     def navigate(self):
         self.page.goto("https://github.com/")
 
-    def login(self):
-        self.page.locator("//a[contains(text(), 'Sign in')]").click()
-        self.page.locator("//input[@id = 'login_field']").fill('alirana78662@gmail.com')
-        self.page.locator("//input[@id = 'password']").click()
-        self.page.locator("//input[@id = 'password']").fill('Mcc02151001@')
-        self.page.locator("//input[@name = 'commit']").click()
-        time.sleep(4)
+    # def login(self):
+    #     self.page.locator("//a[contains(text(), 'Sign in')]").click()
+    #     self.page.locator("//input[@id = 'login_field']").fill('alirana78662@gmail.com')
+    #     self.page.locator("//input[@id = 'password']").click()
+    #     self.page.locator("//input[@id = 'password']").fill('Mcc02151001@')
+    #     self.page.locator("//input[@name = 'commit']").click()
+    #     time.sleep(4)
 
     def Add_Git_Repo_Ui(self):
-        self.page.locator("//span[@class = 'Button-content']").nth(3).click()
+        self.page.locator("//span[@class ='Button-content']").nth(3).click()
         self.page.locator("//input[@id = 'react-aria-2']").fill("GitAutomation")
         self.page.locator("//input[@id='react-aria-6']").click()
         self.page.locator("//input[@id = 'react-aria-8']").click()
